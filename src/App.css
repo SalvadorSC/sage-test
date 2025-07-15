@@ -1,0 +1,93 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  gap: 20px;
+  width: 100vw;
+}
+
+input {
+  margin: 0 auto;
+  padding: 10px;
+  width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.gifGrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.gifItem {
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.gifItem:hover {
+  transform: scale(1.05);
+}
+
+.gifItem img {
+  border-radius: 8px;
+  width: 100%;
+  height: auto;
+}
+
+.notification {
+  position: fixed;
+  top: 20px;
+  background-color: #4caf50;
+  color: white;
+  padding: 10px;
+  border-radius: 4px;
+  transition: right 0.5s ease-in-out;
+}
+
+.notification.hidden {
+  pointer-events: none;
+  right: -1000px;
+}
+.notification.visible {
+  right: 20px;
+  pointer-events: auto;
+}
+
+.notification .close {
+  background: none;
+  border: none;
+  color: black;
+  font-size: 16px;
+  cursor: pointer;
+  margin-left: 20px;
+  margin-right: 5px;
+  max-width: 10px;
+}
+
+.loadMore {
+  position: fixed;
+  bottom: 20px;
+  margin-bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.loading {
+  width: 100vw;
+  text-align: center;
+}
